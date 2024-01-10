@@ -30,7 +30,7 @@ except ImportError:
         return found
 
 main_ns = {}
-ver_path = convert_path('xarm/version.py')
+ver_path = 'xarm/version.py'
 with open(os.path.join(os.getcwd(), ver_path)) as ver_file:
     exec(ver_file.read(), main_ns)
 
