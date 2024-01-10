@@ -29,6 +29,7 @@ except ImportError:
                     found.append(package)
         return found
 
+blabla
 main_ns = {}
 ver_path = convert_path('xarm/version.py')
 with open(ver_path) as ver_file:
