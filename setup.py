@@ -7,7 +7,7 @@
 # Author: Vinman <vinman.wen@ufactory.cc>
 
 import os
-from distutils.util import convert_path
+from distutils.util import convert_path, change_root
 try:
     from setuptools import setup, find_packages
 except ImportError:
@@ -30,8 +30,8 @@ except ImportError:
         return found
 
 main_ns = {}
-ver_path = 'xarm/version.py'
-with open(os.path.join(os.getcwd(), ver_path)) as ver_file:
+ver_path = convert_path('xarm/version.py')
+with open(ver_path) as ver_file:
     exec(ver_file.read(), main_ns)
 
 version = main_ns['__version__']
